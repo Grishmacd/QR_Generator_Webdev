@@ -1,7 +1,5 @@
 # QR_Generator_Webdev
 
-# QR Code Generator (Node.js CLI)
-
 This project is a simple **Node.js command-line app** that takes a URL from the user and generates:
 - a QR code image file: `qr_img.png`
 - a text file containing the entered URL: `URL.txt`
