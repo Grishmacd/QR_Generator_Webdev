@@ -57,15 +57,9 @@ npm i express
 node solution.js
 
 # 6) Enter a URL when prompted
-# ? Type in your URL: https://example.com
-
-# 7) Output files generated
-# - URL.txt
-# - qr_img.png (if your code writes the PNG)
+? Type in your URL: https://example.com
 
 ```
-
-? Type in your URL: https://example.com
 
 ## Output
 
