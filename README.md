@@ -1,57 +1,82 @@
 # QR_Generator_Webdev
 
-This project is a simple **Node.js command-line app** that takes a URL from the user and generates:
-- a QR code image file: `qr_img.png`
-- a text file containing the entered URL: `URL.txt`
-
-The user input is collected using `inquirer`, the QR code is generated using `qr-image`, and the files are saved using Node’s native `fs` module. :contentReference[oaicite:0]{index=0}
+This is a simple **command-line QR Code Generator** built with **Node.js**. It asks the user to enter a URL in the terminal, then generates:
+- a QR code image file (`qr_img.png`)
+- a text file containing the same URL (`URL.txt`)
 
 ---
 
-## What this project is
+## What this project does
 
-A CLI tool that:
-1. Prompts the user to type a URL
-2. Converts that URL into a QR code image
-3. Saves both the QR image and the URL into files :contentReference[oaicite:1]{index=1}
-
----
-
-## What you will see
-
-- A terminal prompt: **"Type in your URL:"** :contentReference[oaicite:2]{index=2}  
-- After entering a URL:
-  - `qr_img.png` is created (QR code for your URL) :contentReference[oaicite:3]{index=3}  
-  - `URL.txt` is created (stores the same URL you entered) :contentReference[oaicite:4]{index=4}  
-  - Terminal message: **"The file has been saved!"** :contentReference[oaicite:5]{index=5}  
+- Takes a URL input using a terminal prompt
+- Generates a QR code for the URL
+- Saves the URL in a text file for reference
 
 ---
 
-## How it works (based on your code)
+## Tech Used
 
-- `inquirer.prompt()` asks for the URL input :contentReference[oaicite:6]{index=6}  
-- `qr.image(url)` creates a QR image stream :contentReference[oaicite:7]{index=7}  
-- `qr_svg.pipe(fs.createWriteStream("qr_img.png"))` writes the QR image to a PNG file :contentReference[oaicite:8]{index=8}  
-- `fs.writeFile("URL.txt", url, ...)` saves the entered URL into a text file :contentReference[oaicite:9]{index=9}  
-
----
-
-## Tech Stack
-
-- **Node.js (ES Modules)** (`"type": "module"`) :contentReference[oaicite:10]{index=10}  
-- **inquirer** (CLI input) :contentReference[oaicite:11]{index=11}  
-- **qr-image** (QR generation) :contentReference[oaicite:12]{index=12}  
-- **fs** (file saving) :contentReference[oaicite:13]{index=13}  
+- **Node.js**
+- **inquirer** (to take input from terminal)
+- **qr-image** (to generate QR code)
+- **fs** (to create and write files)
 
 ---
 
-## Project Structure
+## Project Files
 
 ```text
-2.4-qr-code-project/
-  index.js
+qr-project/
   solution.js
+  index.js
   package.json
   package-lock.json
-  qr_img.png
-  URL.txt
+  README.md
+
+Generated after running:
+- `URL.txt`
+- `qr_img.png`
+```
+
+## Steps to Run (Windows PowerShell)
+
+```powershell
+# 1) Go to your project folder
+cd "C:\Users\Grishma\OneDrive\Desktop\qr-project"
+
+# 2) (Optional) Check files
+ls
+
+# 3) Install required packages
+npm install inquirer qr-image
+
+# 4) (Optional) If you installed express as well
+npm i express
+
+# 5) Run the program
+node solution.js
+
+# 6) Enter a URL when prompted
+# ? Type in your URL: https://example.com
+
+# 7) Output files generated
+# - URL.txt
+# - qr_img.png (if your code writes the PNG)
+
+```
+
+? Type in your URL: https://example.com
+
+## Output
+
+- `URL.txt`  
+  Stores the URL you entered.
+
+- `qr_img.png`  
+  QR code image generated for the URL.
+
+---
+
+## Developer
+Grishma C.D
+
